@@ -12,5 +12,11 @@ pipeline {
           echo "Building ${BUILD_ID}"
       }
     }
+    stage ('Test') {
+      steps {
+        sh 'pwd'
+        sh 'yarn test'
+      }
+    }
   }
 }
